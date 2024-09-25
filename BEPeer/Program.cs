@@ -2,6 +2,7 @@ using System.Text;
 using DAL;
 using DAL.Repositories.Services.Interfaces;
 using DAL.Repository.Services;
+using DAL.Repository.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -75,6 +76,7 @@ builder.Services.AddSwaggerGen(c=>
 builder.Services.AddDbContext<PeerlandingContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<ILoanService, LoanServices>();
 
 var app = builder.Build();
 

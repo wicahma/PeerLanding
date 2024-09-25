@@ -70,7 +70,7 @@ namespace BEPeer.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles ="admin")]
+        //[Authorize(Roles ="admin")]
         public async Task<IActionResult> AddUser(ReqRegisterUserDto register)
         {
             try
@@ -158,7 +158,7 @@ namespace BEPeer.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<IActionResult> GetAllUsers()
         {
             try
@@ -192,7 +192,7 @@ namespace BEPeer.Controllers
         }
 
         [HttpPut]
-        [Authorize(Roles ="admin")]
+        //[Authorize(Roles ="admin")]
         public async Task<IActionResult> UpdatebyAdmin([FromQuery] string id, ReqUpdateAdminDto reqUpdate)
         {
             try
@@ -218,7 +218,7 @@ namespace BEPeer.Controllers
 
 
         [HttpDelete]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete([FromQuery] string id)
         {
             try
